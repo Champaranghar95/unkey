@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contributing to Unkey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .section {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        .section-header {
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            user-select: none;
+        }
+        .section-content {
+            padding: 15px;
+            display: none;
+        }
+        .section-content.active {
+            display: block;
+        }
+        code {
+            background-color: #f1f1f1;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        pre {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contributing to Unkey</h1>
+    
+    <div class="section">
+        <div class="section-header">House Rules</div>
+        <div class="section-content">
+            <ul>
+                <li>Check existing issues and PRs before submitting new ones.</li>
+                <li>Create an issue before beginning development.</li>
+                <li>Pay attention to the <code>needs-approval</code> label on GitHub issues.</li>
+            </ul>
+            <h3>For Contributors:</h3>
+            <ul>
+                <li><strong>Feature Requests / Large-Scale Refactoring:</strong> Wait for approval before coding.</li>
+                <li><strong>Bugs, Security, Documentation, etc.:</strong> You can start coding immediately.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">Developing</div>
+        <div class="section-content">
+            <ol>
+                <li>Fork and clone the repository.</li>
+                <li>Create a new branch: <code>git switch -c MY_BRANCH_NAME</code></li>
+                <li>Follow the <a href="https://unkey.dev/docs/getting-started">getting started guide</a>.</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">Installing</div>
+        <div class="section-content">
+            <ol>
+                <li>Set the correct version of PNPM: <code>corepack enable</code></li>
+                <li>Install dependencies: <code>pnpm install</code></li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">Building and Linting</div>
+        <div class="section-content">
+            <p>Build the project: <code>pnpm build</code></p>
+            <p>Check code formatting: <code>pnpm fmt</code></p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">Making a Pull Request</div>
+        <div class="section-content">
+            <ol>
+                <li>Check "Allow edits from maintainers" when creating your PR.</li>
+                <li>Link to related issues using <code>refs #XXX</code> or <code>fixes #XXX</code>.</li>
+                <li>Fill out the PR Template completely.</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.section-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                content.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
